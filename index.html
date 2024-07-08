@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Translo using BootStrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="container-fluid">
+      <!------FOR MOBILE-------->
+    <div class="row d-sm-flex d-md-flex d-lg-none justify-content-between position-fixed" style="background-color: #011f39fc; height: 89px; width: 100%;">
+      <div class="col-2 pt-3">
+        <img src="images/logo-1.png" alt="" class="img-fluid " >
+      </div>
+      <div class="col-1 pt-4 position-relative ps-5">
+        <i class="fa-solid fa-bars fs-1 me-5" style="color: #FDD450; cursor: pointer;" onclick="openMenu()"></i>
+        <div id="sideMenu" class="row bg-white z-2 d-block position-absolute" style="top: 89px; right: -1400px; height: 100vw;">
+          <div class="col-12 d-flex pt-4 pe-5 ps-3 pb-3 ">
+            <img src="images/mobile-menu-logo3.png" alt="">
+             <i class="bi bi-x-lg fs-5 ps-4 pt-3 fw-bold" onclick="closeMenu()" style="cursor: pointer;"></i>
+            </div>
+          <div class="col-12 fw-bold pt-1 pb-1 pe-5 ps-3" style="color: #121213;">Home</div> <hr>
+          <div class="col-12 fw-bold pt-1 pb-1 pe-5 ps-3" style="color: #121213;">About </div><hr>
+          <div class="col-12 fw-bold pt-1 pb-1 pe-5 ps-3" style="color: #121213;">Services</div><hr>
+          <div class="col-12 fw-bold pt-1 pb-1 pe-5 ps-3" style="color: #121213;">Page</div><hr>
+          <div class="col-12 fw-bold pt-1 pb-1 pe-5 ps-3" style="color: #121213;">Blog</div><hr>
+          <div class="col-12 fw-bold pt-1 pb-1 pe-5 ps-3" style="color: #121213;">Contact</div><hr>
+          <div class="col-12 fw-bold pt-1 pb-1 pe-5 ps-3 fs-5"  style="color: #121213;"><i class="fa-solid fa-square-phone fs-2 pe-3" style="color: #FFD450;"></i></i>(629) 555-0129</div>
+          <div class="col-12 d-flex">
+            <i class="border bi bi-facebook px-2  me-1 fs-2"></i>
+            <i class="border bi bi-twitter-x px-2 me-1 fs-2"></i>
+            <i class="border bi bi-instagram px-2 me-1 fs-2"></i>
+            <i class="border bi bi-linkedin px-2  me-1 fs-2"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+     <!-------FOR MOBILE-------->
+    <div
+        class="row  d-flex  flex-nowrap position-fixed z-2"
+        style="
+          height: 89px;
+          background-color: #011f39fc;
+          box-shadow: 0 4px 15px 0 rgba(13, 66, 80, 0.55);
+          width: 100vw;
+        "
+      >
+        <div class=" col-lg-2 col-md-2 col-2 pt-3">
+          <img src="images/logo-1.png" alt="" class="object-fit-contain justify-content-center align-items-center" style="width: 100%;" />
+        </div>
+        <div class="col-lg-10 d-lg-block d-none " style="max-height: 24px;"">
+         <div class="row">
+          <div class=" col-lg-12 d-sm-none d-md-none d-lg-block  text-white" id="top_nav">
+            <div class="row" id="nav-icon">
+              <div class="col-4 text-center border-end border-light-subtle">
+                <i class="bi bi-geo-alt-fill" style="color: #fdd550"></i>
+                Jones Street, New York, USA
+              </div>
+              <div class="col-3 border-end border-light-subtle">
+                <i class="bi bi-send-fill" style="color: #fdd550"></i>
+                Info@example.com
+              </div>
+              <div class="col-3 border-end border-light-subtle">
+                <i
+                  class="bi bi-telephone-outbound-fill"
+                  style="color: #fdd550"
+                ></i>
+                +70 264 566 579
+              </div>
+              <div class="col-2 border-start border-dark-subtle">
+                <i class="bi bi-facebook px-2"></i>
+                <i class="bi bi-twitter-x px-2"></i>
+                <i class="bi bi-instagram px-2"></i>
+                <i class="bi bi-linkedin px-2"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  text-white navbar-menu z-3">
+            <div class="row mt-1 " style="background-color: #fdd550" id="menu">
+              <div class="col-md-8  px-0">
+                <nav class="navbar navbar-expand-lg" style="color: #fdd550">
+                  <div class="container-fluid">
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarNavDropdown"
+                      aria-controls="navbarNavDropdown"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                      class="collapse navbar-collapse"
+                      id="navbarNavDropdown"
+                    >
+                      <ul class="navbar-nav">
+                        <li class="nav-item dropdown px-3">
+                          <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Home
+                          </a>
+                          <ul class="dropdown-menu mt-3 fs-6 fw-light">
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item px-3">
+                          <a class="nav-link" href="#">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown px-3">
+                          <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Services
+                          </a>
+                          <ul class="dropdown-menu mt-3 fs-6 fw-light">
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown px-3">
+                          <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Pages
+                          </a>
+                          <ul class="dropdown-menu mt-3 fs-6 fw-light">
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item dropdown px-3">
+                          <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Blog
+                          </a>
+                          <ul class="dropdown-menu mt-3 fs-6 fw-light">
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item px-3">
+                          <a class="nav-link" href="#">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <div class="col-md-4 ps-5 pb-1 mt-2" id="search">
+                <i class="bi bi-search me-2 fs-5" style="color: #011f39fc"></i>
+                <button type="button" class="btn btn-light quote-btn ms-5">
+                  Get Free Quote<i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------------------HERO_SECTION--------------------------------------------------->
+    <div class="row bg-image" style="background-image: url(images/slider-v1-img1.jpg)">
+      <div class="col-8 hero-content">
+        <div class="row mt-sm-5">
+          <div class="col-1 ps-5 hero-buttons text-center">
+            <img src="images/slider-v1-icon1.png" alt="" /><br />
+            <button
+              class="rounded-circle border border-0 my-3"
+              style="background-color: #fdd550"
+            >
+              1</button
+            ><br />
+            <button class="rounded-circle border border-0 my-3">2</button><br />
+            <button class="rounded-circle border border-0 my-3">3</button><br />
+            <img src="images/slider-v1-icon2.png" alt="" />
+          </div>
+          <div class="col-9 dark-box p-5 ms-5">
+            <h3 class="text-uppercase hero-heading">Air Freight</h3>
+            <h1 class="text-white heading fw-bolder" style="width: 150%">
+              Fast and Safe <span style="color: #fdd550">transport</span> your
+              product
+            </h1>
+            <p class="mt-4 fs-6" style="color: white">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Doloremque?
+            </p>
+            <button
+              type="button"
+              class="btn fw-bolder button-size"
+              style="background-color: #fdd550; color: #011f39fc"
+            >
+              Calculate Package <i class="bi bi-chevron-double-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-block d-lg-flex pt-5">
+      <div class="col-12  col-lg-6  position-relative">
+        <img
+          src="images/about-one__img1.jpg"
+          alt=""
+          class="about-image z-0"
+        />
+      </div>
+      <div class="col-12  col-lg-6  pe-3 about-content">
+        <h5 class="text-uppercase ">
+          <i class="bi bi-arrow-down-right fw-bolder"></i> About company
+        </h5>
+        <h1 class="pt-1">Digital & Trusted Transport Logistic Company</h1>
+        <p class="fs-6 pt-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod of tempor incididunt ut labore et dolore magna aliqua. Quis
+          ipsum suspend ultrices gravida risus commodo viverra maecenas.
+        </p>
+        <div class="row d-flex bg-white about-delivery me-3">
+          <div class="col-2 pt-4">
+            <img src="images/secure-delivery.png" alt="" />
+          </div>
+          <div class="col-9">
+            <h4 class="fw-bolder" style="color: #186265">
+              Fast Worldwide Delivery
+            </h4>
+            <p class="pt-1" style="color: #6f7174">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod of tempor incididunt ut labore et dolore.
+            </p>
+          </div>
+        </div>
+
+        <div class="row d-flex bg-white about-delivery mt-4 me-3">
+          <div class="col-2 pt-4">
+            <img src="images/worldwide-delivery.png" alt="" />
+          </div>
+          <div class="col-9">
+            <h4 class="fw-bolder" style="color: #186265">
+              Safe And Secure Delivery
+            </h4>
+            <p class="pt-1" style="color: #6f7174">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+              molestiae mollitia repellendus maxime recusandae sequi obcaecati
+              impedit tempore vel corporis?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mt-5 ps-4">
+        <h5 class="text-uppercase fw-bolder" style="color: #fdd550">
+          <i class="bi bi-arrow-down-right fw-bolder"></i>Our services
+        </h5>
+        <br />
+      </div>
+      <div class="row px-4">
+        <div class="col-12 d-block d-lg-flex justify-content-between">
+          <h1 class="fw-bolder" style="color: #0d4250; font-size: 58px">
+            Fast And Professional<br />
+            Logistic Services
+          </h1>
+          <button
+            type="button"
+            class="btn fw-bolder mt-5"
+            style="
+              background-color: #fdd550;
+              color: #011f39fc;
+              height: 60px;
+              width: 190px;
+            "
+          >
+            View All Services <i class="bi bi-chevron-double-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="row my-5 d-flex justify-content-evenly ps-4">
+        <div class="col-10 col-md-5 col-lg-3 my-5 border border-top-0 p-0">
+          <img src="images/blog-v1-img1.jpg" alt="" class="img-fluid w-100" />
+          <h4 class="mx-3 mt-3 fw-bolder" style="color: #0d4250">
+            Air Freight
+          </h4>
+          <p class="mx-3 fw-medium" style="color: #6f7174">
+            Following the quality of service<br />thus having gained trust
+          </p>
+          <button
+            type="button"
+            class="btn btn-outline-secondary mx-3 mb-5 fw-bold"
+            style="color: #186265"
+          >
+            Read More<i class="bi bi-chevron-double-right"></i>
+          </button>
+        </div>
+        <div class="col-10 col-md-5 col-lg-3 my-5 border border-top-0 p-0">
+          <img
+            src="images/service-one__img2.jpg"
+            alt=""
+            class="img-fluid w-100"
+          />
+          <h4 class="mx-3 mt-3 fw-bolder" style="color: #0d4250">
+            Ocean Freight
+          </h4>
+          <p class="mx-3 fw-medium" style="color: #6f7174">
+            Following the quality of service<br />thus having gained trust
+          </p>
+          <button
+            type="button"
+            class="btn btn-outline-secondary mx-3 mb-5 fw-bold"
+            style="color: #186265"
+          >
+            Read More<i class="bi bi-chevron-double-right"></i>
+          </button>
+        </div>
+        <div class="col-10 col-md-5 col-lg-3 my-5 border border-top-0 p-0">
+          <img
+            src="images/service-one__img3.jpg"
+            alt=""
+            class="img-fluid w-100"
+          />
+          <h4 class="mx-3 mt-3 fw-bolder" style="color: #0d4250">
+            Road Freight
+          </h4>
+          <p class="mx-3 fw-medium" style="color: #6f7174">
+            Following the quality of service<br />thus having gained trust
+          </p>
+          <button
+            type="button"
+            class="btn btn-outline-secondary mx-3 mb-5 fw-bold"
+            style="color: #186265"
+          >
+            Read More<i class="bi bi-chevron-double-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="intro-card-background img-fluid overflow-hidden position-relative z-0"
+      style="background-image: url(images/working-process-v1-bg.jpg)"
+    >
+      <div class="intro-fade-overlay"></div>
+      <div class="row position-relative d-block">
+        <div class="col-12 h-25">
+          <img
+            src="images/request-services-v1-bg.jpg"
+            alt=""
+            class="img-fluid p-4"
+          />
+        </div>
+        <div class="text-uppercase intro-card text-white fs-5 fw-900">
+          Watch our Intro<br /><i class="bi bi-arrow-right fs-1 fw-900"></i>
+        </div>
+        <div class="fade-overlay"></div>
+        <button class="btn btn-play">
+          <i class="bi bi-play-circle btn-palyed"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row working-process mt-0 pt-5" style="padding-bottom: 100px">
+      <div class="col-12 d-inline-block">
+        <p
+          class="text-uppercase text-center fw-medium"
+          style="color: #fdd550; font-size: 20px"
+        >
+          <i class="bi bi-arrow-down-right fw-bolder pe-2"></i>check our steps
+        </p>
+        <h1
+          class="text-uppercase text-center fw-bolder"
+          style="color: #fff; font-size: 1.5rem"
+        >
+          Our freight working process
+        </h1>
+        <div class="row d-block d-lg-flex justify-content-center align-content-center">
+          <div
+            class=" col-12  col-lg-3 d-block text-center mt-5 align-content-center justify-content-center"
+          >
+            <div class="d-flex justify-content-center">
+              <img src="images/step-1.png" alt="" />
+              <h2 class="ps-4" style="color: #fdd550">Step-1</h2>
+            </div>
+            <h3 class="text-white fw-bold my-4">The Paperwork</h3>
+            <p class=" text-white fw-bold">
+              Once you place your order <br> via mail or fax our field staff <br> will
+              collect the documents <br> and consignments from the <br> shipper.
+            </p>
+          </div>
+
+          <div class="col-lg-1 d-none d-lg-block">
+            <img src="images/working-process-v1-shape1.png" alt="" class="" />
+          </div>
+          <div
+            class="col-12  col-lg-3 d-block text-center mt-5 align-content-center justify-content-center"
+          >
+            <div class="d-flex justify-content-center">
+              <img src="images/step-2.png" alt="" />
+              <h2 class="ps-4" style="color: #fdd550">Step-2</h2>
+            </div>
+            <h3 class="text-white fw-bold my-4">Select Location</h3>
+            <p class="text-white fw-bold">
+              We’ll evaluate the size and <br> weight of your cargo, find <br> just the
+              right carrier to fly <br> your goods to their <br> destination.
+            </p>
+          </div>
+
+          <div class="col-lg-1 d-none d-lg-block">
+            <img src="images/working-process-v1-shape1.png" alt="" />
+          </div>
+          <div
+            class="col-12  col-lg-3 d-block text-center mt-5 align-content-center justify-content-center"
+          >
+            <div class="d-flex justify-content-center">
+              <img src="images/step-3.png" alt="" />
+              <h2 class="ps-4" style="color: #fdd550">Step-3</h2>
+            </div>
+            <h3 class="text-white fw-bold my-4">Partners Till The End</h3>
+            <p class="text-white fw-bold">
+              Our teams will be working <br> hard at every step of the <br> journey to
+              ensure that your <br> shipment is delivered on <br> time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- second Last -->
+    <div class="row" style="background-image:linear-gradient(180deg, rgba(255, 213, 80, .8), #ffd550 51.4%),url(images/project-v1-bg.jpg);max-height: 390px;">
+      <div class="col-12 ps-4 pt-5">
+        <h5 class="text-uppercase fw-bold" style="color: #0d4250">
+          <i class="bi bi-arrow-down-right fw-bold pe-3"></i>RECENT PROJECT
+        </h5>
+        <br />
+      </div>
+      <div class="row px-4">
+        <div class=" col-12 d-block d-lg-flex justify-content-between">
+          <h1 class="fw-bolder" style="color: #0d4250; font-size: 58px">
+            Transporting Across<br />
+            The World
+          </h1>
+          <button
+            type="button"
+            class="btn fw-bolder mt-5"
+            style="
+              background-color: #0d4250;
+              color: #ffd550;
+              height: 60px;
+              width: 190px;
+            "
+          >
+            View All Project <i class="bi bi-chevron-double-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="row my-5 d-block d-lg-flex justify-content-evenly ps-4 project-section">
+        <div class="col-12  col-lg-3 d-block text-center mt-5 border border-top-0 p-0  position-relative">
+         
+          <img src="images/project-v1-img1.jpg" alt="" class="img-fluid  rounded-top "/>
+          <button type="button" class="btn p-1 position-absolute" style="background-color: #186265; color: #fdd450; top: 13px;left: 13px;">N.01</button>
+          <p class="mt-2 mx-3 fw-medium" style="color: #6f7174">
+            Large Warehouse
+          </p>
+          <h4 class="mx-3 mt-3 fw-bolder" style="color: #121213">
+            Warehouses & Services
+          </h4>
+          <p class="mx-3 fw-medium" style="color: #6f7174">
+            Following the quality of service<br />thus having gained trust
+          </p>
+          <button
+            type="button"
+            class="btn btn-md btn-outline-secondary mx-3 mb-5"
+            style="color: #ffd550;background-color: #0d4250;"
+          >
+            View Details<i class="bi bi-chevron-double-right"></i>
+          </button>
+        </div>
+        <div class="col-12  col-lg-3 d-block text-center mt-5 border border-top-0 p-0 position-relative">
+          <img
+            src="images/project-v1-img4.jpg"
+            alt=""
+            class="img-fluid rounded-top"
+          />
+          <button type="button" class="btn p-1 position-absolute" style="background-color: #186265; color: #fdd450; top: 13px;left: 13px;">N.02</button>
+          <p class="mt-2 mx-3 fw-medium" style="color: #6f7174">
+           Transport for Product
+          </p>
+          <h4 class="mx-3 mt-3 fw-bolder" style="color: #121213">
+            Specialized Transport
+          </h4>
+          <p class="mx-3 fw-medium" style="color: #6f7174">
+            Following the quality of service<br />thus having gained trust
+          </p>
+          <button
+            type="button"
+            class="btn btn-md btn-outline-secondary mx-3 mb-5"
+            style="color: #ffd550;background-color: #0d4250;"
+          >
+          View Details<i class="bi bi-chevron-double-right"></i>
+          </button>
+        </div>
+        <div class="col-12  col-lg-3 d-block text-center mt-5 border border-top-0 p-0 position-relative">
+          <img
+            src="images/project-v1-img2.jpg"
+            alt=""
+            class="img-fluid rounded-top"
+          />
+          <button type="button" class="btn p-1  position-absolute" style="background-color: #186265; color: #fdd450; top: 13px;left: 13px;">N.03</button>
+          <p class="mt-2 mx-3 fw-medium" style="color: #6f7174">
+            Road Transportation
+          </p>
+          <h4 class="mx-3 mt-3 fw-bolder" style="color: #121213">
+            Specialized Transport
+          </h4>
+          <p class="mx-3 fw-medium" style="color: #6f7174">
+            Following the quality of service<br />thus having gained trust
+          </p>
+          <button
+            type="button"
+            class="btn btn-md btn-outline-secondary mx-3 mb-5"
+            style="color: #ffd550;background-color: #0d4250;"
+          >
+          View Details<i class="bi bi-chevron-double-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Second Last ends here -->
+   <div class="picture-only position-relative">
+    <img src="images/faq-v1-bg.jpg" alt="" class="img-fluid w-100 " style="margin-top: 550px;">
+    <h1 class="position-absolute  hero-heading" style="top: 70%; left: 16%; font-size: 4rem;color: #0d4250;">WORLD CLASS FACILITIES</h1>
+   </div>
+   <div class="row w-100 justify-content-center " style="background-image:linear-gradient(180deg, rgba(255, 213, 80, .8), #0d4250 51.4%),url(images/footer-v1-bg.jpg);">
+    <div class="col-11 ">
+      <div class="row text-center justify-content-center align-content-center ">
+        <div class="d-block d-lg-flex col-12 text-center justify-content-between align-content-center  mt-5" style="background-color: #fdd450; padding: 40px 40px 5px 40px;">
+          <img src="images/logo-2.png" alt="" class="col-3 img-fluid mt-4 me-5 " style="width:180px ;height: 53px;">
+          <img src="images/download.jpeg" alt="" class="mb-4 d-none d-lg-block" style="opacity: 0.2;">
+          <p class="col-12 col-lg-4  ms-lg-4 mt-3 mt-lg-3 text-center " style="color: #186265;font-size: 20px;font-weight: 600;">Subscribe to our weekly newsletter to get<br>
+            information and promotion on your inbox</p>
+          <div class="container col-12 col-lg-5 ms-5">
+            <div class="row justify-content-center align-content-center">
+              <div class="col-12">
+                <form>
+                  <div class="input-group mt-3" style="height: 60px;">
+                    <input type="email" class="form-control placeholder-wave border border-0" style="background-color: #0d4250;font-weight: 500;" placeholder="Enter your email" aria-label="Email address" required>
+                    <button class="btn btn-primary border border-0 z-0" style="background-color: #186265;font-weight: 500;" type="submit">Subscribe<i class="bi bi-arrow-right ps-2"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-block d-lg-flex text-center " style="padding-top: 90px;">
+      <div class="col-12  col-lg-3 d-block p-5 text-center">
+        <h3 class="mb-3" style="color: #fdd450;">About Company</h3>
+        <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad voluptas error distinctio et soluta voluptatem dolorem laborum quidem minima! Tempora?</p>
+        <h4  class="text-white">WE ARE AVAILABLE</h4>
+        <p class="text-white fs-6 ">Mon-Sat: 10:00am to 07:30pm</p>
+        <div class="d-block fs-4"> 
+        <a href="#" class=" ms-0 me-2 my-2 py-2 pe-2" style="color: #fff;""><i class="fa-brands fa-square-facebook fa-bounce"></i></a>
+        <a href="#" class=" m-2 p-2" style="color: #fff;""><i class="fa-brands fa-square-instagram fa-bounce"></i></a>
+        <a href="#" class="m-2 p-2" style="color: #fff;""><i class="fa-brands fa-square-x-twitter fa-bounce"></i></a>
+        <a href="#" class=" m-2 p-2" style="color: #fff;""><i class="fa-brands fa-linkedin fa-bounce"></i></a>
+        </div>
+        
+      </div>
+      <div class="col-12  col-lg-3  text-center d-block p-5">
+        <h3 class="mb-3" style="color: #fdd450;">Quick Links</h3>                     
+        <a href="#" class="text-white text-decoration-none ">Mission & Vision</a><br><br>
+        <a href="#" class="text-white text-decoration-none">Get Pricing Plan</a><br><br>
+        <a href="#" class="text-white text-decoration-none">Meet The Team</a><br><br>
+        <a href="#" class="text-white text-decoration-none">Our Clients</a><br><br>
+        <a href="#" class="text-white text-decoration-none">Available Positions</a><br><br>
+        <a href="#" class="text-white text-decoration-none">Job Application</a><br><br>
+      </div>
+      <div class="col-12 col-lg-3 text-center d-block p-5">
+        <h3 class="mb-3" style="color: #fdd450;">Quick Links</h3>                     
+        <a href="#" class="text-white text-decoration-none ">Air Freight</a><br><br>
+        <a href="#" class="text-white text-decoration-none">Ocean freight</a><br><br>
+        <a href="#" class="text-white text-decoration-none">Railway Freight</a><br><br>
+        <a href="#" class="text-white text-decoration-none">Warehousing</a><br><br>
+        <a href="#" class="text-white text-decoration-none">Packaging</a><br><br>
+        <a href="#" class="text-white text-decoration-none">Distribution</a><br><br>
+      </div>
+      <div class="col-12 col-lg-3 text-center d-block mt-5">
+        <h3 class="mb-3" style="color: #fdd450;">Get In Touch</h3>
+        <div class="d-block text-white mb-3">
+          <i class="bi bi-geo-alt-fill fs-2 me-3" style="color: #fdd550"></i>
+          Jones Street, New York, USA
+        </div>
+        <div class="d-block text-white mb-3">
+          <i class="bi bi-send-fill fs-2 me-3 " style="color: #fdd550"></i>
+          Info@example.com
+        </div>
+        <div class="d-block text-white mb-3">
+          <i
+            class="bi bi-telephone-outbound-fill fs-2 me-3"
+            style="color: #fdd550"
+          ></i>
+          +70 264 566 579
+        </div>
+      </div>
+    </div>
+   </div>
+   <div class="footer-bottom d-flex justify-content-between align-content-center" style="background-color: #186265;">
+    <p class="text-white ms-5 mt-3">© 2024 Translo, All Rights Reserved.</p>
+    <div class="me-5 justify-content-between align-content-center">
+      <a href="#" class="text-white ms-4 text-decoration-none">Terms & Conditions</a>
+      <a href="#" class="text-white ms-4 text-decoration-none">Privacy Policy </a>
+      <a href="#" class="text-white ms-4 text-decoration-none">Support</a>
+    </div>
+   </div>
+   
+  </div>
+  <button id="backToTopBtn" class="btn btn-lg" title="Go to top">
+    <i class="bi bi-arrow-up fs-5"></i>
+  </button>
+  <script>
+    var sideMenu = document.getElementById("sideMenu");
+    const openMenu = () => {
+      sideMenu.style.right = "0";
+    };
+  
+    const closeMenu = () => {
+      sideMenu.style.right = "-1400px";
+    };
+    window.addEventListener("load", function () {
+      document.body.classList.add("loaded");
+    });
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  var backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  backToTopBtn.onclick = function() {
+    document.documentElement.scrollTop = 0; 
+  };
+});
+  </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/0a644c484d.js" crossorigin="anonymous"></script>
+  </body>
+</html>
